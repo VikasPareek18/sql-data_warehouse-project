@@ -42,7 +42,7 @@ Develop a centralized data warehouse that consolidates sales data from multiple 
 - Enable data-driven business decisions
 
 📄 **License**
-This project is licensed under the [MIT License](License), You are free to use it and do the modification besst suitable to you.
+This project is licensed under the [MIT License](License), You are free to use it and do the modification best suitable to you.
 
 👤 **About Me**
 I’m Vikas Pareek, an aspiring Data Analyst currently studying at SVNIT Surat.
