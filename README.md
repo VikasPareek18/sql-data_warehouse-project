@@ -1,4 +1,4 @@
-# sql-data_warehouse-project
+# SQL data warehouse AND Analytics project
 Building a modern SQL data warehouse with SQL server using ETL processes, Data Modeling  and alaytics
 
 Welcome to the **Data Warehouse and Analytics Project** repository! 🚀
