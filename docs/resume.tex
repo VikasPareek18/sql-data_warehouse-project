@@ -1,0 +1,194 @@
+%% ATS-Friendly One-Page Resume — Vikas Pareek
+%% Optimised for Data Analytics & Data Science Intern roles
+%% Compile with: pdflatex resume.tex
+
+\documentclass[10pt,letterpaper]{article}
+
+%% ── Packages ──────────────────────────────────────────────────────────────────
+\usepackage[
+  top=0.45in, bottom=0.45in,
+  left=0.55in, right=0.55in
+]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{parskip}
+\usepackage{microtype}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+%% ── Hyperlink styling ─────────────────────────────────────────────────────────
+\hypersetup{
+  colorlinks=true,
+  urlcolor=black,
+  linkcolor=black
+}
+
+%% ── Section formatting ────────────────────────────────────────────────────────
+\titleformat{\section}
+  {\normalsize\bfseries\scshape}
+  {}{0em}{}
+  [\titlerule]
+
+\titlespacing{\section}{0pt}{6pt}{4pt}
+
+%% ── List settings ─────────────────────────────────────────────────────────────
+\setlist[itemize]{
+  leftmargin=1.2em,
+  itemsep=1pt,
+  parsep=0pt,
+  topsep=2pt
+}
+
+\setlist[itemize,2]{
+  leftmargin=1.2em,
+  label={--},
+  itemsep=0.5pt,
+  parsep=0pt,
+  topsep=1pt
+}
+
+%% ── Helpers ───────────────────────────────────────────────────────────────────
+\newcommand{\resumeItem}[1]{\item #1}
+
+\newcommand{\datedEntry}[2]{%
+  \begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+    #1 & \small #2
+  \end{tabular*}%
+}
+
+\pagestyle{empty}
+
+%% ══════════════════════════════════════════════════════════════════════════════
+\begin{document}
+%% ══════════════════════════════════════════════════════════════════════════════
+
+%% ── Header ────────────────────────────────────────────────────────────────────
+\begin{center}
+  {\LARGE\bfseries Vikas Pareek}\\[4pt]
+  \small
+  9860968881 \textbar{}
+  \href{mailto:vikaspareek947@gmail.com}{vikaspareek947@gmail.com} \textbar{}
+  \href{https://linkedin.com/in/vikas-pareek}{linkedin.com/in/vikas-pareek} \textbar{}
+  \href{https://github.com/vikas-pareek}{github.com/vikas-pareek}
+\end{center}
+
+\vspace{-2pt}
+
+%% ── Education ─────────────────────────────────────────────────────────────────
+\section{Education}
+
+\begin{itemize}[leftmargin=1em]
+  \item
+    \datedEntry{%
+      \textbf{Sardar Vallabhbhai National Institute of Technology}, Surat, Gujarat%
+    }{Aug 2023 -- May 2027}\\
+    B.Tech in Mechanical Engineering \quad \textbf{CGPA: 8.19}
+
+  \item
+    \datedEntry{%
+      \textbf{Apala School of Education}, Nohar, Rajasthan%
+    }{Apr 2021 -- Mar 2022}\\
+    Higher Secondary Education (Class XII, CBSE) \quad \textbf{Percentage: 92.6\%}
+
+  \item
+    \datedEntry{%
+      \textbf{Bharati Vidyapeeth Sec \& Sr Sec School}, Pune, Maharashtra%
+    }{Apr 2019 -- Mar 2020}\\
+    Secondary Education (Class X, CBSE) \quad \textbf{Percentage: 83.6\%}
+\end{itemize}
+
+%% ── Projects ──────────────────────────────────────────────────────────────────
+\section{Projects}
+
+\begin{itemize}[leftmargin=1em]
+
+  \item
+    \textbf{End-to-End Ola Ride Data Analysis \& Business Analytics Dashboard}\\
+    \textit{Data Analysis \textemdash{} Advanced SQL \textemdash{} Power BI \textemdash{} Python \textemdash{} Statistical Analysis}
+    \begin{itemize}
+      \item Analyzed large-scale Ola ride datasets using SQL to extract KPIs related to revenue,
+            cancellations, customer retention, and behavior patterns, improving reporting accuracy by 30\%.
+      \item Cleaned, transformed, and validated raw datasets in Excel and Python (Pandas, NumPy),
+            ensuring data quality and consistency for downstream analytics and stakeholder reporting.
+      \item Built interactive Power BI dashboards to visualize ride trends, peak demand hours,
+            city-wise performance metrics, and revenue insights, enabling data-driven decision-making.
+    \end{itemize}
+
+  \item
+    \textbf{End-to-End EdTech Recorded Lectures Data Analysis}\\
+    \textit{Data Analysis \textemdash{} Power BI \textemdash{} DAX \textemdash{} EdTech Market Research}
+    \begin{itemize}
+      \item Performed category-wise EdTech lecture analysis using Power BI and DAX to study course
+            views, engagement rates, language distribution, and instructor performance.
+      \item Built Power BI dashboards to evaluate top instructors, subtitle coverage, and course
+            duration impact on learner engagement and retention.
+      \item Generated data-driven insights and statistical reports to guide content strategy based
+            on learner demand and market relevance, informing product roadmap decisions.
+    \end{itemize}
+
+  \item
+    \textbf{SQL Data Warehouse Development from Scratch}\\
+    \textit{Data Engineering \textemdash{} SQL \textemdash{} ETL Pipeline \textemdash{} Data Modeling \textemdash{} Star Schema}
+    \begin{itemize}
+      \item Architected and built a SQL Server data warehouse integrating ERP and CRM source data
+            using ETL pipelines and dimensional modeling (star schema / snowflake schema).
+      \item Performed data cleaning, transformation, and quality checks to resolve missing values,
+            duplicates, and inconsistencies, ensuring reliable and auditable analytics.
+      \item Designed analytics-ready schemas, documented data models, and developed SQL-based
+            reports to analyze customer behavior, sales trends, and product performance for
+            executive decision-making.
+    \end{itemize}
+
+\end{itemize}
+
+%% ── Skills ────────────────────────────────────────────────────────────────────
+\section{Skills}
+
+\begin{itemize}[leftmargin=1em]
+  \item \textbf{Programming Languages:} Python, SQL, C++, C, HTML, CSS
+  \item \textbf{Data Analysis \& ML/DS Tools:} Pandas, NumPy, Scikit-learn, Regression, Classification,
+        Gradient Descent, PCA, Clustering, Statsmodels, Statistical Analysis, Feature Engineering
+  \item \textbf{Visualization \& Database Tools:} Power BI, DAX, Matplotlib, Seaborn, Streamlit,
+        MySQL, SQL Server, Excel, BeautifulSoup, Requests, Selenium
+  \item \textbf{Concepts:} ETL Pipelines, Data Warehousing, Data Modeling, EDA, A/B Testing,
+        Business Intelligence, Machine Learning, NLP Fundamentals
+  \item \textbf{Soft Skills:} Analytical Thinking, Problem Solving, Communication, Teamwork,
+        Time Management
+\end{itemize}
+
+%% ── Certifications ────────────────────────────────────────────────────────────
+\section{Certifications}
+
+\begin{itemize}[leftmargin=1em]
+  \item Machine Learning Specialization \textemdash{} Stanford University (Coursera)
+  \item Python From Scratch \textemdash{} 100 Days of Code (Udemy)
+\end{itemize}
+
+%% ── Leadership and Responsibilities ──────────────────────────────────────────
+\section{Leadership \& Responsibilities}
+
+\begin{itemize}[leftmargin=1em]
+  \item
+    \datedEntry{%
+      Joint Treasurer \textemdash{} Centre for Human Resource Development, SVNIT%
+    }{July 2025 -- June 2026}
+  \item
+    \datedEntry{%
+      Head \textemdash{} Publicity Committee, Sparsh'25 (Cultural Fest), SVNIT%
+    }{2025}
+\end{itemize}
+
+%% ── Interests ─────────────────────────────────────────────────────────────────
+\section{Interests}
+
+\begin{itemize}[leftmargin=1em]
+  \item Passionate about machine learning applications, AI-driven products, and real-world
+        data analytics solutions.
+  \item Curious about Generative AI, Large Language Models (LLMs), and real-time AI
+        decision systems.
+\end{itemize}
+
+%% ══════════════════════════════════════════════════════════════════════════════
+\end{document}
+%% ══════════════════════════════════════════════════════════════════════════════
