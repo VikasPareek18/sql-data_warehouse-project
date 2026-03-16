@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" width="900" height="520" font-family="Segoe UI, Arial, sans-serif">
+
+  <!-- Background -->
+  <rect width="900" height="520" fill="#f8f9fa" rx="12"/>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" font-size="20" font-weight="bold" fill="#1a1a2e">Data Warehouse Architecture</text>
+  <line x1="200" y1="48" x2="700" y2="48" stroke="#cccccc" stroke-width="1"/>
+
+  <!-- ===== SOURCE SYSTEMS ===== -->
+  <rect x="30" y="80" width="150" height="340" fill="#e8f4fd" stroke="#3498db" stroke-width="2" rx="10"/>
+  <text x="105" y="105" text-anchor="middle" font-size="13" font-weight="bold" fill="#2980b9">Source Systems</text>
+
+  <!-- CRM box -->
+  <rect x="50" y="118" width="110" height="70" fill="#ffffff" stroke="#3498db" stroke-width="1.5" rx="6"/>
+  <text x="105" y="140" text-anchor="middle" font-size="12" font-weight="bold" fill="#2c3e50">CRM System</text>
+  <text x="105" y="158" text-anchor="middle" font-size="10" fill="#555">cust_info</text>
+  <text x="105" y="173" text-anchor="middle" font-size="10" fill="#555">prd_info</text>
+  <text x="105" y="188" text-anchor="middle" font-size="10" fill="#555">sales_details</text>
+
+  <!-- ERP box -->
+  <rect x="50" y="210" width="110" height="80" fill="#ffffff" stroke="#3498db" stroke-width="1.5" rx="6"/>
+  <text x="105" y="232" text-anchor="middle" font-size="12" font-weight="bold" fill="#2c3e50">ERP System</text>
+  <text x="105" y="250" text-anchor="middle" font-size="10" fill="#555">loc_a101</text>
+  <text x="105" y="265" text-anchor="middle" font-size="10" fill="#555">cust_az12</text>
+  <text x="105" y="280" text-anchor="middle" font-size="10" fill="#555">px_cat_g1v2</text>
+
+  <!-- CSV files note -->
+  <rect x="50" y="310" width="110" height="40" fill="#fff9c4" stroke="#f39c12" stroke-width="1.5" rx="6"/>
+  <text x="105" y="327" text-anchor="middle" font-size="10" fill="#7d6608">📄 CSV Files</text>
+  <text x="105" y="342" text-anchor="middle" font-size="10" fill="#7d6608">(Flat Files)</text>
+
+  <!-- ===== BRONZE LAYER ===== -->
+  <rect x="220" y="80" width="150" height="340" fill="#fef3e2" stroke="#e67e22" stroke-width="2" rx="10"/>
+  <text x="295" y="105" text-anchor="middle" font-size="13" font-weight="bold" fill="#d35400">Bronze Layer</text>
+  <text x="295" y="122" text-anchor="middle" font-size="10" fill="#7f8c8d">(Raw / Ingestion)</text>
+
+  <rect x="240" y="135" width="110" height="195" fill="#ffffff" stroke="#e67e22" stroke-width="1.5" rx="6"/>
+  <text x="295" y="155" text-anchor="middle" font-size="10" font-weight="bold" fill="#2c3e50">bronze schema</text>
+  <line x1="250" y1="162" x2="340" y2="162" stroke="#e67e22" stroke-width="0.8"/>
+  <text x="295" y="178" text-anchor="middle" font-size="9.5" fill="#555">crm_cust_info</text>
+  <text x="295" y="195" text-anchor="middle" font-size="9.5" fill="#555">crm_prd_info</text>
+  <text x="295" y="212" text-anchor="middle" font-size="9.5" fill="#555">crm_sales_details</text>
+  <text x="295" y="229" text-anchor="middle" font-size="9.5" fill="#555">erp_loc_a101</text>
+  <text x="295" y="246" text-anchor="middle" font-size="9.5" fill="#555">erp_cust_az12</text>
+  <text x="295" y="263" text-anchor="middle" font-size="9.5" fill="#555">erp_px_cat_g1v2</text>
+
+  <rect x="240" y="355" width="110" height="40" fill="#fff9c4" stroke="#e67e22" stroke-width="1.5" rx="6"/>
+  <text x="295" y="372" text-anchor="middle" font-size="9.5" fill="#7d6608">🔄 BULK INSERT</text>
+  <text x="295" y="387" text-anchor="middle" font-size="9.5" fill="#7d6608">No transformation</text>
+
+  <!-- ===== SILVER LAYER ===== -->
+  <rect x="410" y="80" width="150" height="340" fill="#eafaf1" stroke="#27ae60" stroke-width="2" rx="10"/>
+  <text x="485" y="105" text-anchor="middle" font-size="13" font-weight="bold" fill="#1e8449">Silver Layer</text>
+  <text x="485" y="122" text-anchor="middle" font-size="10" fill="#7f8c8d">(Cleansed / Conformed)</text>
+
+  <rect x="430" y="135" width="110" height="195" fill="#ffffff" stroke="#27ae60" stroke-width="1.5" rx="6"/>
+  <text x="485" y="155" text-anchor="middle" font-size="10" font-weight="bold" fill="#2c3e50">silver schema</text>
+  <line x1="440" y1="162" x2="530" y2="162" stroke="#27ae60" stroke-width="0.8"/>
+  <text x="485" y="178" text-anchor="middle" font-size="9.5" fill="#555">crm_cust_info</text>
+  <text x="485" y="195" text-anchor="middle" font-size="9.5" fill="#555">crm_prd_info</text>
+  <text x="485" y="212" text-anchor="middle" font-size="9.5" fill="#555">crm_sales_details</text>
+  <text x="485" y="229" text-anchor="middle" font-size="9.5" fill="#555">erp_loc_a101</text>
+  <text x="485" y="246" text-anchor="middle" font-size="9.5" fill="#555">erp_cust_az12</text>
+  <text x="485" y="263" text-anchor="middle" font-size="9.5" fill="#555">erp_px_cat_g1v2</text>
+
+  <rect x="430" y="355" width="110" height="40" fill="#d5f5e3" stroke="#27ae60" stroke-width="1.5" rx="6"/>
+  <text x="485" y="372" text-anchor="middle" font-size="9.5" fill="#1a5e36">🧹 Cleanse &amp; Cast</text>
+  <text x="485" y="387" text-anchor="middle" font-size="9.5" fill="#1a5e36">Standardize &amp; Fix</text>
+
+  <!-- ===== GOLD LAYER ===== -->
+  <rect x="600" y="80" width="160" height="340" fill="#fdf2f8" stroke="#8e44ad" stroke-width="2" rx="10"/>
+  <text x="680" y="105" text-anchor="middle" font-size="13" font-weight="bold" fill="#6c3483">Gold Layer</text>
+  <text x="680" y="122" text-anchor="middle" font-size="10" fill="#7f8c8d">(Business / Analytics)</text>
+
+  <!-- dim_customers -->
+  <rect x="620" y="135" width="120" height="50" fill="#ffffff" stroke="#8e44ad" stroke-width="1.5" rx="6"/>
+  <text x="680" y="152" text-anchor="middle" font-size="10" font-weight="bold" fill="#2c3e50">dim_customers</text>
+  <text x="680" y="168" text-anchor="middle" font-size="9" fill="#555">Dimension View</text>
+  <text x="680" y="180" text-anchor="middle" font-size="9" fill="#555">customer_key (SK)</text>
+
+  <!-- dim_products -->
+  <rect x="620" y="200" width="120" height="50" fill="#ffffff" stroke="#8e44ad" stroke-width="1.5" rx="6"/>
+  <text x="680" y="217" text-anchor="middle" font-size="10" font-weight="bold" fill="#2c3e50">dim_products</text>
+  <text x="680" y="233" text-anchor="middle" font-size="9" fill="#555">Dimension View</text>
+  <text x="680" y="245" text-anchor="middle" font-size="9" fill="#555">product_key (SK)</text>
+
+  <!-- fact_sales -->
+  <rect x="620" y="265" width="120" height="50" fill="#f9ebff" stroke="#8e44ad" stroke-width="2" rx="6"/>
+  <text x="680" y="282" text-anchor="middle" font-size="10" font-weight="bold" fill="#6c3483">fact_sales</text>
+  <text x="680" y="298" text-anchor="middle" font-size="9" fill="#555">Fact View</text>
+  <text x="680" y="310" text-anchor="middle" font-size="9" fill="#555">Star Schema</text>
+
+  <rect x="620" y="335" width="120" height="60" fill="#e8daef" stroke="#8e44ad" stroke-width="1.5" rx="6"/>
+  <text x="680" y="353" text-anchor="middle" font-size="9.5" fill="#4a235a">⭐ Star Schema</text>
+  <text x="680" y="368" text-anchor="middle" font-size="9.5" fill="#4a235a">SQL Views</text>
+  <text x="680" y="383" text-anchor="middle" font-size="9.5" fill="#4a235a">Analytics-Ready</text>
+
+  <!-- ===== ARROWS Source → Bronze ===== -->
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
+    </marker>
+  </defs>
+  <line x1="160" y1="155" x2="218" y2="155" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="160" y1="248" x2="218" y2="248" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Arrow Bronze → Silver (ETL) -->
+  <line x1="350" y1="235" x2="408" y2="235" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="379" y="228" text-anchor="middle" font-size="9" fill="#666">ETL</text>
+
+  <!-- Arrow Silver → Gold -->
+  <line x1="540" y1="235" x2="598" y2="235" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="569" y="228" text-anchor="middle" font-size="9" fill="#666">Views</text>
+
+  <!-- ===== ANALYTICS CONSUMERS ===== -->
+  <rect x="30" y="445" width="840" height="55" fill="#eaf2ff" stroke="#2980b9" stroke-width="1.5" rx="10"/>
+  <text x="450" y="463" text-anchor="middle" font-size="12" font-weight="bold" fill="#1a5276">📊 Analytics &amp; Reporting Consumers</text>
+  <text x="220" y="487" text-anchor="middle" font-size="10" fill="#2471a3">SQL Queries</text>
+  <text x="390" y="487" text-anchor="middle" font-size="10" fill="#2471a3">BI Dashboards (Power BI)</text>
+  <text x="570" y="487" text-anchor="middle" font-size="10" fill="#2471a3">Ad-hoc Analysis</text>
+  <text x="730" y="487" text-anchor="middle" font-size="10" fill="#2471a3">Data Science</text>
+  <!-- separator lines -->
+  <line x1="300" y1="455" x2="300" y2="493" stroke="#aad4f5" stroke-width="1"/>
+  <line x1="480" y1="455" x2="480" y2="493" stroke="#aad4f5" stroke-width="1"/>
+  <line x1="650" y1="455" x2="650" y2="493" stroke="#aad4f5" stroke-width="1"/>
+
+  <!-- Arrow Gold → Analytics -->
+  <line x1="680" y1="420" x2="680" y2="443" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+</svg>

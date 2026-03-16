@@ -14,6 +14,22 @@ The project follows industry-standard approaches to:
 - Analytical data modeling
 - BI reporting
 
+### Data Architecture
+The warehouse follows a three-tier **Medallion Architecture**:
+
+![Data Architecture](docs/data_architecture.svg)
+
+| Layer | Schema | Description |
+|-------|--------|-------------|
+| **Bronze** | `bronze` | Raw data ingested from source CSV files with no transformation |
+| **Silver** | `silver` | Cleansed, type-cast, and standardised data ready for modelling |
+| **Gold** | `gold` | Business-ready Star Schema views used directly for analytics |
+
+### Data Model (Star Schema)
+The Gold layer exposes a clean Star Schema consisting of two dimension views and one fact view:
+
+![Data Model](docs/data_model.svg)
+
 ## 🛠️ Project Requirements
 1️⃣ **Building the Data Warehouse (Data Engineering)**
 🎯 **Objective**

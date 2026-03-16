@@ -1,0 +1,158 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 560" width="860" height="560" font-family="Segoe UI, Arial, sans-serif">
+
+  <!-- Background -->
+  <rect width="860" height="560" fill="#f8f9fa" rx="12"/>
+
+  <!-- Title -->
+  <text x="430" y="38" text-anchor="middle" font-size="20" font-weight="bold" fill="#1a1a2e">Data Model – Star Schema (Gold Layer)</text>
+  <line x1="160" y1="48" x2="700" y2="48" stroke="#cccccc" stroke-width="1"/>
+
+  <!-- ==============================
+       dim_customers (left)
+       ============================== -->
+  <rect x="30" y="80" width="220" height="370" fill="#eaf2ff" stroke="#2980b9" stroke-width="2" rx="10"/>
+  <!-- Header -->
+  <rect x="30" y="80" width="220" height="36" fill="#2980b9" rx="10"/>
+  <rect x="30" y="104" width="220" height="12" fill="#2980b9"/>
+  <text x="140" y="104" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">dim_customers</text>
+  <!-- PK row -->
+  <rect x="40" y="126" width="200" height="24" fill="#d6eaf8" rx="3"/>
+  <text x="52" y="143" font-size="10" font-weight="bold" fill="#1a5276">PK</text>
+  <text x="80" y="143" font-size="10" fill="#1a5276">customer_key</text>
+  <text x="230" y="143" text-anchor="end" font-size="9" fill="#7f8c8d">INT (Surrogate)</text>
+  <!-- Divider -->
+  <line x1="40" y1="153" x2="240" y2="153" stroke="#aed6f1" stroke-width="1"/>
+  <!-- Columns -->
+  <text x="52" y="170" font-size="10" fill="#2c3e50">customer_id</text>     <text x="230" y="170" text-anchor="end" font-size="9" fill="#7f8c8d">INT</text>
+  <text x="52" y="188" font-size="10" fill="#2c3e50">customer_number</text>  <text x="230" y="188" text-anchor="end" font-size="9" fill="#7f8c8d">NVARCHAR(50)</text>
+  <text x="52" y="206" font-size="10" fill="#2c3e50">first_name</text>        <text x="230" y="206" text-anchor="end" font-size="9" fill="#7f8c8d">NVARCHAR(50)</text>
+  <text x="52" y="224" font-size="10" fill="#2c3e50">last_name</text>         <text x="230" y="224" text-anchor="end" font-size="9" fill="#7f8c8d">NVARCHAR(50)</text>
+  <text x="52" y="242" font-size="10" fill="#2c3e50">country</text>           <text x="230" y="242" text-anchor="end" font-size="9" fill="#7f8c8d">NVARCHAR(50)</text>
+  <text x="52" y="260" font-size="10" fill="#2c3e50">marital_status</text>    <text x="230" y="260" text-anchor="end" font-size="9" fill="#7f8c8d">NVARCHAR(50)</text>
+  <text x="52" y="278" font-size="10" fill="#2c3e50">gender</text>            <text x="230" y="278" text-anchor="end" font-size="9" fill="#7f8c8d">NVARCHAR(50)</text>
+  <text x="52" y="296" font-size="10" fill="#2c3e50">birthdate</text>         <text x="230" y="296" text-anchor="end" font-size="9" fill="#7f8c8d">DATE</text>
+  <text x="52" y="314" font-size="10" fill="#2c3e50">create_date</text>       <text x="230" y="314" text-anchor="end" font-size="9" fill="#7f8c8d">DATE</text>
+  <!-- Source note -->
+  <line x1="40" y1="322" x2="240" y2="322" stroke="#aed6f1" stroke-width="1"/>
+  <text x="140" y="340" text-anchor="middle" font-size="9" fill="#555">Sources: CRM + ERP</text>
+  <text x="140" y="355" text-anchor="middle" font-size="9" fill="#555">crm_cust_info</text>
+  <text x="140" y="370" text-anchor="middle" font-size="9" fill="#555">erp_cust_az12</text>
+  <text x="140" y="385" text-anchor="middle" font-size="9" fill="#555">erp_loc_a101</text>
+  <text x="140" y="406" text-anchor="middle" font-size="10" font-style="italic" fill="#2980b9">VIEW (gold schema)</text>
+  <text x="140" y="424" text-anchor="middle" font-size="9" fill="#555">18,484 customers</text>
+  <text x="140" y="440" text-anchor="middle" font-size="9" fill="#27ae60">✔ No duplicates in PK</text>
+
+  <!-- ==============================
+       fact_sales (center)
+       ============================== -->
+  <rect x="310" y="140" width="240" height="320" fill="#fdf2f8" stroke="#8e44ad" stroke-width="2.5" rx="10"/>
+  <!-- Header -->
+  <rect x="310" y="140" width="240" height="36" fill="#8e44ad" rx="10"/>
+  <rect x="310" y="164" width="240" height="12" fill="#8e44ad"/>
+  <text x="430" y="164" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">fact_sales</text>
+  <!-- FK rows -->
+  <rect x="320" y="186" width="220" height="24" fill="#e8d5f5" rx="3"/>
+  <text x="332" y="203" font-size="10" font-weight="bold" fill="#4a235a">FK</text>
+  <text x="358" y="203" font-size="10" fill="#4a235a">product_key</text>
+  <text x="530" y="203" text-anchor="end" font-size="9" fill="#7f8c8d">INT</text>
+  <rect x="320" y="214" width="220" height="24" fill="#e8d5f5" rx="3"/>
+  <text x="332" y="231" font-size="10" font-weight="bold" fill="#4a235a">FK</text>
+  <text x="358" y="231" font-size="10" fill="#4a235a">customer_key</text>
+  <text x="530" y="231" text-anchor="end" font-size="9" fill="#7f8c8d">INT</text>
+  <!-- Divider -->
+  <line x1="320" y1="242" x2="540" y2="242" stroke="#d2b4de" stroke-width="1"/>
+  <!-- Columns -->
+  <text x="332" y="259" font-size="10" fill="#2c3e50">order_number</text>    <text x="530" y="259" text-anchor="end" font-size="9" fill="#7f8c8d">NVARCHAR(50)</text>
+  <text x="332" y="277" font-size="10" fill="#2c3e50">order_date</text>       <text x="530" y="277" text-anchor="end" font-size="9" fill="#7f8c8d">DATE</text>
+  <text x="332" y="295" font-size="10" fill="#2c3e50">shipping_date</text>    <text x="530" y="295" text-anchor="end" font-size="9" fill="#7f8c8d">DATE</text>
+  <text x="332" y="313" font-size="10" fill="#2c3e50">due_date</text>         <text x="530" y="313" text-anchor="end" font-size="9" fill="#7f8c8d">DATE</text>
+  <text x="332" y="331" font-size="10" fill="#2c3e50">sales_amount</text>     <text x="530" y="331" text-anchor="end" font-size="9" fill="#7f8c8d">INT</text>
+  <text x="332" y="349" font-size="10" fill="#2c3e50">quantity</text>         <text x="530" y="349" text-anchor="end" font-size="9" fill="#7f8c8d">INT</text>
+  <text x="332" y="367" font-size="10" fill="#2c3e50">price</text>            <text x="530" y="367" text-anchor="end" font-size="9" fill="#7f8c8d">INT</text>
+  <!-- Source note -->
+  <line x1="320" y1="375" x2="540" y2="375" stroke="#d2b4de" stroke-width="1"/>
+  <text x="430" y="393" text-anchor="middle" font-size="9" fill="#555">Source: crm_sales_details</text>
+  <text x="430" y="411" text-anchor="middle" font-size="10" font-style="italic" fill="#8e44ad">VIEW (gold schema)</text>
+  <text x="430" y="429" text-anchor="middle" font-size="9" fill="#555">60,398 orders</text>
+  <text x="430" y="447" text-anchor="middle" font-size="9" fill="#27ae60">✔ Referential integrity OK</text>
+
+  <!-- ==============================
+       dim_products (right)
+       ============================== -->
+  <rect x="610" y="80" width="220" height="370" fill="#eafaf1" stroke="#27ae60" stroke-width="2" rx="10"/>
+  <!-- Header -->
+  <rect x="610" y="80" width="220" height="36" fill="#27ae60" rx="10"/>
+  <rect x="610" y="104" width="220" height="12" fill="#27ae60"/>
+  <text x="720" y="104" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">dim_products</text>
+  <!-- PK row -->
+  <rect x="620" y="126" width="200" height="24" fill="#d5f5e3" rx="3"/>
+  <text x="632" y="143" font-size="10" font-weight="bold" fill="#1a5e36">PK</text>
+  <text x="660" y="143" font-size="10" fill="#1a5e36">product_key</text>
+  <text x="810" y="143" text-anchor="end" font-size="9" fill="#7f8c8d">INT (Surrogate)</text>
+  <!-- Divider -->
+  <line x1="620" y1="153" x2="820" y2="153" stroke="#a9dfbf" stroke-width="1"/>
+  <!-- Columns -->
+  <text x="632" y="170" font-size="10" fill="#2c3e50">product_id</text>      <text x="810" y="170" text-anchor="end" font-size="9" fill="#7f8c8d">INT</text>
+  <text x="632" y="188" font-size="10" fill="#2c3e50">product_number</text>  <text x="810" y="188" text-anchor="end" font-size="9" fill="#7f8c8d">NVARCHAR(50)</text>
+  <text x="632" y="206" font-size="10" fill="#2c3e50">product_name</text>    <text x="810" y="206" text-anchor="end" font-size="9" fill="#7f8c8d">NVARCHAR(50)</text>
+  <text x="632" y="224" font-size="10" fill="#2c3e50">category_id</text>     <text x="810" y="224" text-anchor="end" font-size="9" fill="#7f8c8d">NVARCHAR(50)</text>
+  <text x="632" y="242" font-size="10" fill="#2c3e50">category</text>        <text x="810" y="242" text-anchor="end" font-size="9" fill="#7f8c8d">NVARCHAR(50)</text>
+  <text x="632" y="260" font-size="10" fill="#2c3e50">subcategory</text>     <text x="810" y="260" text-anchor="end" font-size="9" fill="#7f8c8d">NVARCHAR(50)</text>
+  <text x="632" y="278" font-size="10" fill="#2c3e50">maintenance</text>     <text x="810" y="278" text-anchor="end" font-size="9" fill="#7f8c8d">NVARCHAR(50)</text>
+  <text x="632" y="296" font-size="10" fill="#2c3e50">cost</text>            <text x="810" y="296" text-anchor="end" font-size="9" fill="#7f8c8d">INT</text>
+  <text x="632" y="314" font-size="10" fill="#2c3e50">product_line</text>    <text x="810" y="314" text-anchor="end" font-size="9" fill="#7f8c8d">NVARCHAR(50)</text>
+  <text x="632" y="332" font-size="10" fill="#2c3e50">start_date</text>      <text x="810" y="332" text-anchor="end" font-size="9" fill="#7f8c8d">DATE</text>
+  <!-- Source note -->
+  <line x1="620" y1="340" x2="820" y2="340" stroke="#a9dfbf" stroke-width="1"/>
+  <text x="720" y="358" text-anchor="middle" font-size="9" fill="#555">Sources: CRM + ERP</text>
+  <text x="720" y="373" text-anchor="middle" font-size="9" fill="#555">crm_prd_info</text>
+  <text x="720" y="388" text-anchor="middle" font-size="9" fill="#555">erp_px_cat_g1v2</text>
+  <text x="720" y="406" text-anchor="middle" font-size="10" font-style="italic" fill="#27ae60">VIEW (gold schema)</text>
+  <text x="720" y="424" text-anchor="middle" font-size="9" fill="#555">295 products (active)</text>
+  <text x="720" y="440" text-anchor="middle" font-size="9" fill="#27ae60">✔ No duplicates in PK</text>
+
+  <!-- ===== RELATIONSHIP LINES =====
+       fact_sales.customer_key  → dim_customers.customer_key
+       fact_sales.product_key   → dim_products.product_key
+  -->
+  <defs>
+    <marker id="rel-arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#888"/>
+    </marker>
+    <marker id="rel-arrow-left" markerWidth="8" markerHeight="8" refX="2" refY="3" orient="auto">
+      <path d="M8,0 L8,6 L0,3 z" fill="#888"/>
+    </marker>
+  </defs>
+  <!-- dim_customers → fact_sales (1-to-many) -->
+  <!-- from right edge of dim_customers to left edge of fact_sales -->
+  <line x1="250" y1="215" x2="308" y2="222" stroke="#888" stroke-width="1.8" stroke-dasharray="6,3" marker-end="url(#rel-arrow)"/>
+  <!-- "1" on dim side, "N" on fact side -->
+  <text x="258" y="211" font-size="12" font-weight="bold" fill="#2980b9">1</text>
+  <text x="296" y="218" font-size="12" font-weight="bold" fill="#8e44ad">N</text>
+
+  <!-- dim_products → fact_sales (1-to-many) -->
+  <line x1="609" y1="209" x2="552" y2="197" stroke="#888" stroke-width="1.8" stroke-dasharray="6,3" marker-end="url(#rel-arrow)"/>
+  <text x="597" y="207" font-size="12" font-weight="bold" fill="#27ae60">1</text>
+  <text x="558" y="197" font-size="12" font-weight="bold" fill="#8e44ad">N</text>
+
+  <!-- ===== LEGEND ===== -->
+  <rect x="30" y="468" width="800" height="72" fill="#f2f3f4" stroke="#bdc3c7" stroke-width="1" rx="8"/>
+  <text x="430" y="486" text-anchor="middle" font-size="11" font-weight="bold" fill="#2c3e50">Legend</text>
+  <!-- PK -->
+  <rect x="50" y="495" width="24" height="14" fill="#d6eaf8" stroke="#2980b9" stroke-width="1" rx="2"/>
+  <text x="52" y="507" font-size="9" font-weight="bold" fill="#1a5276">PK</text>
+  <text x="80" y="507" font-size="9" fill="#555">Primary / Surrogate Key</text>
+  <!-- FK -->
+  <rect x="210" y="495" width="24" height="14" fill="#e8d5f5" stroke="#8e44ad" stroke-width="1" rx="2"/>
+  <text x="212" y="507" font-size="9" font-weight="bold" fill="#4a235a">FK</text>
+  <text x="240" y="507" font-size="9" fill="#555">Foreign Key</text>
+  <!-- relationship line -->
+  <line x1="350" y1="502" x2="390" y2="502" stroke="#888" stroke-width="1.8" stroke-dasharray="6,3" marker-end="url(#rel-arrow)"/>
+  <text x="400" y="507" font-size="9" fill="#555">1-to-Many Relationship</text>
+  <!-- SK note -->
+  <text x="530" y="507" font-size="9" fill="#555">SK = Surrogate Key (ROW_NUMBER)</text>
+
+  <text x="50" y="528" font-size="9" fill="#555">All Gold objects are SQL VIEWS built on top of the Silver schema tables.</text>
+  <text x="50" y="542" font-size="9" fill="#555">Fact table rows represent individual sales line items. Inactive products (prd_end_dt IS NOT NULL) are excluded from dim_products.</text>
+
+</svg>
