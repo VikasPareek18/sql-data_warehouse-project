@@ -1,0 +1,198 @@
+%% ============================================================
+%%  ATS-Optimised Resume — Vikas Pareek
+%%  Target: Data Science / Data Engineering / AI Internships
+%%  Compile with: pdflatex resume.tex
+%% ============================================================
+
+\documentclass[10pt, letterpaper]{article}
+
+% ---------- packages ----------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.55in, top=0.5in, bottom=0.5in]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{parskip}
+\usepackage{lmodern}
+
+% ---------- colour palette ----------
+\definecolor{accent}{HTML}{2C3E7A}   % dark navy for section rules / links
+
+% ---------- hyperref ----------
+\hypersetup{
+    colorlinks=true,
+    urlcolor=accent,
+    hidelinks
+}
+
+% ---------- section heading style ----------
+\titleformat{\section}
+  {\large\bfseries\color{accent}}
+  {}
+  {0em}
+  {}
+  [\color{accent}\titlerule]
+
+\titlespacing{\section}{0pt}{8pt}{4pt}
+
+% ---------- no page numbers ----------
+\pagestyle{empty}
+
+% ---------- list settings ----------
+\setlist[itemize]{noitemsep, topsep=2pt, leftmargin=1.2em, label=\textbullet}
+
+% ---------- helpers ----------
+% \projheading{Title}{Tech Stack}{Date Range}
+\newcommand{\projheading}[3]{%
+  \textbf{#1} \hfill \textit{#3}\\
+  \textit{\small #2}
+}
+
+% \expheading{Role}{Company}{Date Range}
+\newcommand{\expheading}[3]{%
+  \textbf{#1} \textemdash\ #2 \hfill \textit{#3}
+}
+
+% ============================================================
+\begin{document}
+
+% ----------------------------------------------------------------
+%  HEADER
+% ----------------------------------------------------------------
+\begin{center}
+  {\LARGE\bfseries Vikas Pareek}\\[4pt]
+  +91-XXXXXXXXXX \quad
+  \href{mailto:your.email@example.com}{your.email@example.com} \quad
+  \href{https://linkedin.com/in/your-profile}{linkedin.com/in/your-profile} \quad
+  \href{https://github.com/VikasPareek18}{github.com/VikasPareek18}
+\end{center}
+
+% ----------------------------------------------------------------
+%  PROFESSIONAL SUMMARY
+% ----------------------------------------------------------------
+\section{Professional Summary}
+
+Results-driven Data Science and Analytics student at SVNIT Surat with hands-on
+experience designing end-to-end data warehouse solutions using SQL Server, ETL pipelines,
+and analytical data modeling. Proficient in Python, SQL, Pandas, and data visualization
+tools. Seeking a Data Science / Data Engineering internship to apply machine learning,
+predictive modeling, and business intelligence skills to solve real-world problems.
+
+% ----------------------------------------------------------------
+%  SKILLS
+% ----------------------------------------------------------------
+\section{Skills}
+
+\noindent
+\textbf{Programming Languages:} Python, SQL, T-SQL \\
+\textbf{Data Science \& Machine Learning:} Machine Learning, Predictive Modeling,
+  Statistical Analysis, Scikit-learn, NumPy, Pandas \\
+\textbf{Data Engineering:} ETL Pipeline Design, Data Warehousing,
+  Data Modeling (Star/Snowflake Schema), Data Integration \\
+\textbf{Databases:} SQL Server (SSMS), PostgreSQL, MySQL \\
+\textbf{Data Visualization:} Matplotlib, Seaborn, Power BI, Tableau \\
+\textbf{Tools \& Technologies:} Git, GitHub, Jupyter Notebook, VS Code
+
+% ----------------------------------------------------------------
+%  PROJECTS
+% ----------------------------------------------------------------
+\section{Projects}
+
+\projheading{SQL Data Warehouse \& Analytics Solution}
+            {Python \(\cdot\) SQL Server \(\cdot\) T-SQL \(\cdot\) ETL \(\cdot\) Data Modeling \(\cdot\) Power BI}
+            {Jan 2025 -- Mar 2025}
+\begin{itemize}
+  \item Engineered a multi-layered data warehouse (Bronze \textrightarrow\ Silver \textrightarrow\ Gold
+        architecture) using SQL Server, consolidating sales data from 2 source systems (ERP + CRM)
+        into a unified analytical model.
+  \item Designed and implemented ETL pipelines that cleaned and integrated 50{,}000+ records,
+        resolving data quality issues such as missing values, duplicates, and schema inconsistencies.
+  \item Built 10+ business-ready SQL analytical queries to track customer behavior, product
+        performance, and sales trends, enabling data-driven reporting for stakeholders.
+  \item Documented data models and schemas using entity-relationship diagrams, reducing
+        onboarding time for analytics team members by an estimated 40\%.
+  \item Implemented star schema data model in the Gold layer, optimizing query performance by
+        eliminating redundant joins and improving report generation speed.
+\end{itemize}
+
+\vspace{4pt}
+\projheading{[Add Your ML / Data Science Project Here]}
+            {Python \(\cdot\) Scikit-learn \(\cdot\) Pandas \(\cdot\) NumPy \(\cdot\) Matplotlib}
+            {Month YYYY -- Month YYYY}
+\begin{itemize}
+  \item Built a supervised machine learning model using Python and Scikit-learn to predict
+        [target variable], achieving [X]\% accuracy on the test dataset.
+  \item Performed exploratory data analysis (EDA) on a dataset of [N] records using Pandas
+        and NumPy, identifying [key insight] that improved feature engineering.
+  \item Visualized model performance metrics (ROC curve, confusion matrix, feature importance)
+        using Matplotlib and Seaborn to communicate results to non-technical stakeholders.
+\end{itemize}
+
+\vspace{4pt}
+\projheading{[Add Your Data Analysis / Visualisation Project Here]}
+            {Python \(\cdot\) Pandas \(\cdot\) NumPy \(\cdot\) Power BI / Tableau}
+            {Month YYYY -- Month YYYY}
+\begin{itemize}
+  \item Analyzed a dataset of [N] rows using Python and Pandas, uncovering [key finding]
+        that led to [measurable outcome].
+  \item Developed interactive dashboards in Power BI / Tableau to visualize KPIs, reducing
+        manual reporting effort by [X] hours per week.
+  \item Applied statistical analysis techniques (correlation, regression, hypothesis testing)
+        to validate business hypotheses and support decision-making.
+\end{itemize}
+
+% ----------------------------------------------------------------
+%  EXPERIENCE / INTERNSHIPS
+% ----------------------------------------------------------------
+\section{Experience / Internships}
+
+\expheading{Data Science / Analytics Intern}{[Company Name]}{Month YYYY -- Month YYYY}
+\begin{itemize}
+  \item Analyzed [domain] data using Python and SQL, extracting actionable insights that
+        contributed to a [X]\% improvement in [business metric].
+  \item Developed and maintained ETL workflows to process [volume] of data daily, ensuring
+        data accuracy and pipeline reliability.
+  \item Created data visualisations and dashboards using [tool], presenting findings to a
+        team of [N] stakeholders weekly.
+\end{itemize}
+
+\textit{\small If no formal internship: replace with a freelance project, academic lab
+experience, or a relevant academic course project.}
+
+% ----------------------------------------------------------------
+%  EDUCATION
+% ----------------------------------------------------------------
+\section{Education}
+
+\textbf{B.Tech --- [Your Branch/Department]} \hfill \textit{Expected Graduation: Month YYYY}\\
+Sardar Vallabhbhai National Institute of Technology (SVNIT), Surat
+\quad \textbf{CGPA: X.XX / 10}
+{\small\textit{(adjust scale to your institution's grading system, e.g.\ X.X / 4.0)}}
+
+\begin{itemize}
+  \item \textbf{Relevant Coursework:} Data Structures \& Algorithms,
+        Database Management Systems, Statistics \& Probability,
+        Machine Learning, Linear Algebra
+\end{itemize}
+
+% ----------------------------------------------------------------
+%  ACHIEVEMENTS & CERTIFICATIONS
+% ----------------------------------------------------------------
+\section{Achievements \& Certifications}
+
+\begin{itemize}
+  \item \textbf{[Hackathon / Competition Name]} --- [Rank / Achievement], [Organiser], Month YYYY
+  \item \textbf{[Certification Name]} --- [Provider, e.g.\ Coursera / Google / IBM], Month YYYY\\
+        {\small\textit{e.g.\ ``IBM Data Science Professional Certificate'',
+        ``Google Data Analytics Certificate''}}
+  \item [GitHub project / open-source contribution with stars or forks metric]
+\end{itemize}
+
+\end{document}
+%% ============================================================
+%%  Fill in every [placeholder] before submitting your resume.
+%%  ATS Note: plain-text PDF export from this template passes
+%%  most ATS keyword parsers without embedded graphics or tables.
+%% ============================================================
