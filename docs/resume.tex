@@ -1,0 +1,194 @@
+%% ATS-Friendly One-Page Resume — Vikas Pareek
+%% Optimised for Data Analytics & Data Science Intern roles
+%% Compile with: pdflatex resume.tex
+
+\documentclass[10pt,letterpaper]{article}
+
+%% ── Packages ──────────────────────────────────────────────────────────────────
+\usepackage[
+  top=0.50in, bottom=0.50in,
+  left=0.60in, right=0.60in
+]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{parskip}
+\usepackage{microtype}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{xcolor}
+\usepackage{array}
+\usepackage{tabularx}
+
+%% ── Hyperlink styling ─────────────────────────────────────────────────────────
+\hypersetup{
+  colorlinks=true,
+  urlcolor=black,
+  linkcolor=black
+}
+
+%% ── Section formatting ────────────────────────────────────────────────────────
+\titleformat{\section}
+  {\large\bfseries\uppercase}
+  {}{0em}{}
+  [\vspace{-4pt}\rule{\linewidth}{0.6pt}\vspace{2pt}]
+
+\titlespacing{\section}{0pt}{8pt}{4pt}
+
+%% ── Subsection for project/entry titles ──────────────────────────────────────
+\titleformat{\subsection}[runin]
+  {\normalsize\bfseries}
+  {}{0em}{}
+
+\titlespacing{\subsection}{0pt}{4pt}{2pt}
+
+%% ── List settings ─────────────────────────────────────────────────────────────
+\setlist[itemize]{
+  leftmargin=1.4em,
+  itemsep=2pt,
+  parsep=0pt,
+  topsep=2pt
+}
+
+\setlist[itemize,2]{
+  leftmargin=1.2em,
+  label={\textbullet},
+  itemsep=1pt,
+  parsep=0pt,
+  topsep=1pt
+}
+
+%% ── Helpers ───────────────────────────────────────────────────────────────────
+
+%% Entry with title on left and date on right
+\newcommand{\entryHeader}[3]{%
+  \noindent
+  \begin{tabularx}{\linewidth}{@{}X r@{}}
+    \textbf{#1}, \textit{#2} & \small\textit{#3}
+  \end{tabularx}%
+  \vspace{1pt}%
+}
+
+%% Simpler entry for leadership/awards
+\newcommand{\sideEntry}[2]{%
+  \noindent
+  \begin{tabularx}{\linewidth}{@{}X r@{}}
+    #1 & \small\textit{#2}
+  \end{tabularx}%
+}
+
+\pagestyle{empty}
+
+%% ══════════════════════════════════════════════════════════════════════════════
+\begin{document}
+%% ══════════════════════════════════════════════════════════════════════════════
+
+%% ── Header ────────────────────────────────────────────────────────────────────
+\begin{center}
+  {\LARGE\bfseries Vikas Pareek}\\[5pt]
+  \small
+  +91-9860968881 \quad\textbar\quad
+  \href{mailto:vikaspareek947@gmail.com}{vikaspareek947@gmail.com} \quad\textbar\quad
+  \href{https://linkedin.com/in/vikas-pareek}{linkedin.com/in/vikas-pareek} \quad\textbar\quad
+  \href{https://github.com/vikas-pareek}{github.com/vikas-pareek}
+\end{center}
+
+\vspace{2pt}
+
+%% ── Professional Summary ──────────────────────────────────────────────────────
+\section{Summary}
+
+Aspiring Data Analyst and B.Tech student at SVNIT Surat with hands-on experience
+in SQL, Python, Power BI, and ETL-based data engineering. Skilled at transforming
+raw datasets into actionable business insights through data cleaning, dimensional
+modeling, and interactive dashboards. Seeking a Data Analytics or Data Science
+internship to apply technical skills in a real-world environment.
+
+%% ── Education ─────────────────────────────────────────────────────────────────
+\section{Education}
+
+\begin{itemize}[leftmargin=0pt, label={}]
+
+  \item \entryHeader{Sardar Vallabhbhai National Institute of Technology}{Surat, Gujarat}{Aug 2023 -- May 2027}
+  B.Tech in Mechanical Engineering \hfill \textbf{CGPA: 8.19 / 10}
+
+  \item \entryHeader{Apala School of Education}{Nohar, Rajasthan}{Apr 2021 -- Mar 2022}
+  Higher Secondary Education (Class XII, CBSE) \hfill \textbf{92.6\%}
+
+  \item \entryHeader{Bharati Vidyapeeth Sec \& Sr Sec School}{Pune, Maharashtra}{Apr 2019 -- Mar 2020}
+  Secondary Education (Class X, CBSE) \hfill \textbf{83.6\%}
+
+\end{itemize}
+
+%% ── Projects ──────────────────────────────────────────────────────────────────
+\section{Projects}
+
+\begin{itemize}[leftmargin=0pt, label={}]
+
+  \item \textbf{End-to-End Ola Ride Data Analysis \& Business Analytics Dashboard}\\
+  \textit{Advanced SQL \textemdash{} Python (Pandas, NumPy) \textemdash{} Power BI \textemdash{} Statistical Analysis}
+  \begin{itemize}
+    \item Queried and analyzed large-scale Ola ride datasets using SQL to extract KPIs
+          (revenue, cancellations, customer retention), improving reporting accuracy by 30\%.
+    \item Cleaned and transformed raw data with Python (Pandas, NumPy) to ensure consistency
+          and reliability for downstream analytics and stakeholder reporting.
+    \item Designed interactive Power BI dashboards visualizing ride trends, peak demand,
+          city-wise performance, and revenue insights, enabling data-driven decisions.
+  \end{itemize}
+
+  \item \textbf{EdTech Recorded Lectures Data Analysis}\\
+  \textit{Power BI \textemdash{} DAX \textemdash{} EdTech Market Research \textemdash{} Data Visualization}
+  \begin{itemize}
+    \item Performed category-wise EdTech lecture analysis using Power BI and DAX to evaluate
+          course views, engagement rates, and instructor performance across 500+ courses.
+    \item Built dashboards to study subtitle coverage and course duration impact on learner
+          engagement, surfacing insights that guided content-strategy decisions.
+    \item Produced statistical reports on learner demand and market trends to inform the
+          product roadmap and improve content relevance.
+  \end{itemize}
+
+  \item \textbf{SQL Data Warehouse Development from Scratch}\\
+  \textit{SQL Server \textemdash{} ETL Pipeline \textemdash{} Data Modeling \textemdash{} Star Schema \textemdash{} Data Engineering}
+  \begin{itemize}
+    \item Architected a SQL Server data warehouse integrating ERP and CRM data via
+          ETL pipelines and dimensional modeling (star \& snowflake schema).
+    \item Performed data cleaning, transformation, and quality checks to resolve missing
+          values, duplicates, and inconsistencies, ensuring auditable analytics.
+    \item Designed analytics-ready schemas and SQL-based reports to analyze customer
+          behavior, sales trends, and product performance for executive decision-making.
+  \end{itemize}
+
+\end{itemize}
+
+%% ── Skills ────────────────────────────────────────────────────────────────────
+\section{Skills}
+
+\begin{itemize}[leftmargin=0pt, label={}]
+  \item \textbf{Programming Languages:}~~~Python, SQL, C++, C, HTML, CSS
+  \item \textbf{Data Analysis / ML \& DS:}~~~Pandas, NumPy, Scikit-learn, Statsmodels,
+        Regression, Classification, Clustering, PCA, Statistical Analysis, Feature Engineering
+  \item \textbf{Visualization \& Databases:}~~~Power BI, DAX, Matplotlib, Seaborn, Streamlit,
+        MySQL, SQL Server, Excel, BeautifulSoup, Selenium
+  \item \textbf{Concepts:}~~~ETL Pipelines, Data Warehousing, Data Modeling, EDA,
+        A/B Testing, Machine Learning, Business Intelligence, NLP Fundamentals
+\end{itemize}
+
+%% ── Certifications ────────────────────────────────────────────────────────────
+\section{Certifications}
+
+\begin{itemize}[leftmargin=0pt, label={}]
+  \item Machine Learning Specialization \textemdash{} Stanford University (Coursera)
+  \item Python From Scratch \textemdash{} 100 Days of Code (Udemy)
+\end{itemize}
+
+%% ── Leadership and Responsibilities ──────────────────────────────────────────
+\section{Leadership \& Responsibilities}
+
+\begin{itemize}[leftmargin=0pt, label={}]
+  \item \sideEntry{Joint Treasurer \textemdash{} Centre for Human Resource Development, SVNIT}{Jul 2025 -- Jun 2026}
+  \item \sideEntry{Head, Publicity Committee \textemdash{} Sparsh'25 Cultural Fest, SVNIT}{2025}
+\end{itemize}
+
+%% ══════════════════════════════════════════════════════════════════════════════
+\end{document}
+%% ══════════════════════════════════════════════════════════════════════════════
